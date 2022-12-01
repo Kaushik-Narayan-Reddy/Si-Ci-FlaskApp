@@ -22,6 +22,7 @@ def welcome():
 
 @app.route('/', methods=['POST'])
 def result():
+    #taking the user input
     var_1 = request.form.get("var_1", type=float, default=0)
     var_2 = request.form.get("var_2", type=float, default=0)
     var_3 = request.form.get("var_2", type=float, default=0)
