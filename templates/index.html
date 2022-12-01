@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link 
+	</head>
+
+	<body align=center>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><legend><h1>Simple and Compound Interest Calculator</h1></legend></div>
+			<div class="col-md-4"></div>
+		</div>
+			<br>
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form class="form-horizontal" method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_1">Principal :</label>
+						<div class="col-xs-7">
+							<input type="number" class="form-control" name="var_1"  value="{{ request.form['var_1'] }}" placeholder="&nbsp;0&nbsp;">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_2">Time (in years) :</label>
+						<div class="col-xs-7">
+							<input type="number" class="form-control" name="var_2"  value="{{ request.form['var_2'] }}" placeholder="&nbsp;0&nbsp;">
+						</div>
+					</div>
+                    <div class="form-group">
+						<label class="control-label col-xs-3" for="var_3">Rate of Interest :</label>
+						<div class="col-xs-7">
+							<input type="number" class="form-control" name="var_3"  value="{{ request.form['var_3'] }}" placeholder="&nbsp;0&nbsp;">
+						</div>
+					</div>
+                    <div class="form-group">
+						<label class="control-label col-xs-3" for="var_4">Number of times interest applied per annum (Only for Compound Interest):</label>
+						<div class="col-xs-7">
+							<input type="number" class="form-control" name="var_4"  value="{{ request.form['var_4'] }}" placeholder="&nbsp;0&nbsp;">
+						</div>
+					</div>
+					<div class="form-group">
+            			<label class="control-label col-xs-3">Operation:</label>
+            			<div class="col-xs-7">
+                			<select class="form-control" name="operation">
+                                <option disabled>Choose either operation</option>
+                    			<option>Simple Interest</option>
+                    			<option>Compound Interest</option>
+                			</select>
+            			</div>
+            		</div>
+					<div class="form-group">
+            			<div class="col-xs-offset-3 col-xs-9">
+                			<input type="submit" class="btn btn-success" value="Submit">
+                			<input type="reset" class="btn btn-danger" value="Reset">
+            			</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3">Total due accrued :</label>
+						<div class="col-xs-7">
+							<input type="text" name="result" class="form-control" placeholder={{ entry }}>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label class="control-label"><h5>The default value for number of times interest applied per annum for compound interest is 1.</h5></label>
+					</div>
+        		</form>
+        	</div>
+        	<div class="col-md-4"></div></div>
+		</div>
+	</body>
+</html>
