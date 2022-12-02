@@ -11,9 +11,7 @@ def compound_interest(P,t,r,n):
 
 def simple_interest(P,t,r):
     B = P+((P*r*t)/100)
-    # r = r/100
-    # A = P*(1+(r*t))
-    # print(B)
+    
     return B
 
 app = Flask(__name__)
