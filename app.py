@@ -10,8 +10,11 @@ def compound_interest(P,t,r,n):
 
 
 def simple_interest(P,t,r):
-    A = P+((P*t*r)/100)
-    return A
+    B = P+((P*r*t)/100)
+    # r = r/100
+    # A = P*(1+(r*t))
+    # print(B)
+    return B
 
 app = Flask(__name__)
 # app.config.from_object(__name__)
@@ -25,8 +28,8 @@ def result():
     #taking the user input
     var_1 = request.form.get("var_1", type=float, default=0)
     var_2 = request.form.get("var_2", type=float, default=0)
-    var_3 = request.form.get("var_2", type=float, default=0)
-    var_4 = request.form.get("var_2", type=float, default=0)
+    var_3 = request.form.get("var_3", type=float, default=0)
+    var_4 = request.form.get("var_4", type=float, default=0)
     operation = request.form.get("operation")
     if(operation == 'Simple Interest'):
         result = simple_interest(var_1,var_2,var_3)
